@@ -31,7 +31,9 @@
     ],
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
-    "no-shadow": "off"
+    "no-shadow": "off",
+    "no-underscore-dangle": "off",
+    "array-callback-return": "off"
   },
   "ignorePatterns": [
     "dist/",
