@@ -6,12 +6,10 @@ import Book from '../components/Book';
 const BooksList = ({ books }) => (
   <ul className="books-list">
     {
-      books.map((v) => (
+      books.map((book) => (
         <Book
-          key={v.id}
-          id={v.id}
-          title={v.title}
-          category={v.category}
+          key={book.id}
+          book={book}
         />
       ))
     }
