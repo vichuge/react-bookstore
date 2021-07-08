@@ -6,7 +6,6 @@ const Book = ({ id, title, category }) => (
 );
 
 Book.propTypes = {
-  // book: PropTypes.objectOf(Object).isRequired,
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
