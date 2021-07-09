@@ -32,14 +32,24 @@ const BookForm = ({ createBook }) => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" onChange={handleChange} value={title} required />
-      <select onChange={handleChangeSelect} required value={category}>
-        <option key="default" value="">Select one...</option>
-        {
-          categories.map((name) => <option key={name} value={name}>{name}</option>)
-        }
-      </select>
-      <input type="submit" value="Create new book" />
+      <div className="form-group">
+        <label htmlFor="title">
+          Title
+          <input placeholder="Add a title..." className="form-control" id="title" type="text" onChange={handleChange} value={title} required />
+        </label>
+      </div>
+      <div className="form-group mt-2">
+        <label htmlFor="category">
+          Category
+          <select className="form-control" onChange={handleChangeSelect} required value={category}>
+            <option key="default" value="">Select one...</option>
+            {
+              categories.map((name) => <option key={name} value={name}>{name}</option>)
+            }
+          </select>
+        </label>
+      </div>
+      <input type="submit" value="Create new book" className="btn btn-primary mt-3" />
     </form>
   );
 };
