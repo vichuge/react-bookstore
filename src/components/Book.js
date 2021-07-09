@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Book = ({ book }) => (
-  <li id={book.id}>{`${book.title}: ${book.category}`}</li>
+  <>
+    <td>{book.title}</td>
+    <td>{book.category}</td>
+  </>
 );
 
 Book.propTypes = {
