@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 import { createBook } from '../actions';
 
 const BookForm = ({ createBook }) => {
+  const myIdFloat = Math.random() * (1000 - 5) + 5;
+  const myId = Math.ceil(myIdFloat);
+  const [id, setId] = useState(myId);
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
   const categories = [
@@ -21,11 +24,16 @@ const BookForm = ({ createBook }) => {
   const handleChangeSelect = (e) => {
     setCategory(e.target.value);
   };
+  const handleChangeId = (e) => setId(e.target.value);
   const handleSubmit = (e) => {
     createBook({
+      id,
       title,
       category,
     });
+    const myIdFloat = Math.random() * (1000 - 5) + 5;
+    const myId = Math.ceil(myIdFloat);
+    setId(myId);
     setTitle('');
     setCategory('');
     e.preventDefault();
@@ -33,6 +41,7 @@ const BookForm = ({ createBook }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-group">
+        <input type="hidden" value={id} onChange={handleChangeId} />
         <label htmlFor="title">
           Title
           <input placeholder="Add a title..." className="form-control" id="title" type="text" onChange={handleChange} value={title} required />
