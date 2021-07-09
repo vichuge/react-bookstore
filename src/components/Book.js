@@ -6,11 +6,11 @@ const Book = ({ book, handleRemoveBook }) => {
     handleRemoveBook(book);
   };
   return (
-    <>
+    <tr key={book.id}>
       <td>{book.title}</td>
       <td>{book.category}</td>
       <td><button type="button" onClick={handleBookRemove} className="btn btn-danger">Delete</button></td>
-    </>
+    </tr>
   );
 };
 
