@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
 
-const BookForm = ({ createBook }) => {
+const generateId = () => {
   const myIdFloat = Math.random() * (1000 - 5) + 5;
   const myId = Math.ceil(myIdFloat);
-  const [id, setId] = useState(myId);
+  return myId;
+};
+
+const BookForm = ({ createBook }) => {
+  const [id, setId] = useState(generateId);
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
   const categories = [
@@ -31,9 +35,7 @@ const BookForm = ({ createBook }) => {
       title,
       category,
     });
-    const myIdFloat = Math.random() * (1000 - 5) + 5;
-    const myId = Math.ceil(myIdFloat);
-    setId(myId);
+    setId(generateId);
     setTitle('');
     setCategory('');
     e.preventDefault();
