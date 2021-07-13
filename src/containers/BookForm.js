@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
+import categories from './categories';
 
 const generateId = () => {
   const myIdFloat = Math.random() * (1000 - 5) + 5;
@@ -13,21 +14,8 @@ const BookForm = ({ createBook }) => {
   const [id, setId] = useState(generateId);
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
-  const categories = [
-    'Action',
-    'Biography',
-    'Comedy',
-    'Drama',
-    'Fantasy',
-    'Google',
-    'Horror',
-  ];
-  const handleChange = (e) => {
-    setTitle(e.target.value);
-  };
-  const handleChangeSelect = (e) => {
-    setCategory(e.target.value);
-  };
+  const handleChange = (e) => setTitle(e.target.value);
+  const handleChangeSelect = (e) => setCategory(e.target.value);
   const handleChangeId = (e) => setId(e.target.value);
   const handleSubmit = (e) => {
     createBook({
