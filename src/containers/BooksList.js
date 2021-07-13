@@ -15,7 +15,7 @@ const BooksList = ({
   const handleRemoveBook = (book) => {
     deleteBook(book);
   };
-  const handleChangeList = (category) => {
+  const handleFilterChange = (category) => {
     changeFilter(category);
     setCategory(category);
   };
@@ -31,7 +31,7 @@ const BooksList = ({
   };
   return (
     <>
-      <CategoryFilter handleChangeList={handleChangeList} />
+      <CategoryFilter anyValue={handleFilterChange} />
       <table className="table">
         <thead>
           <tr>

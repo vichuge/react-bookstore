@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import categories from '../containers/categories';
 
-const CategoryFilter = ({ handleChangeList }) => {
+const CategoryFilter = ({ handleFilterChange }) => {
   const handleChange = (e) => {
-    handleChangeList(e.target.value);
+    handleFilterChange(e.target.value);
   };
   return (
     <select className="form-control" onChange={handleChange}>
@@ -17,7 +17,7 @@ const CategoryFilter = ({ handleChangeList }) => {
 };
 
 CategoryFilter.propTypes = {
-  handleChangeList: PropTypes.func.isRequired,
+  handleFilterChange: PropTypes.func.isRequired,
 };
 
 export default CategoryFilter;
