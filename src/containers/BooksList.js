@@ -31,7 +31,7 @@ const BooksList = ({
   };
   return (
     <>
-      <CategoryFilter anyValue={handleFilterChange} />
+      <CategoryFilter handleFilterChange={handleFilterChange} />
       {
         booksFilter().map((book) => (
           <Book
