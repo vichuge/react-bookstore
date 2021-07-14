@@ -7,12 +7,31 @@ const CategoryFilter = ({ handleFilterChange }) => {
     handleFilterChange(e.target.value);
   };
   return (
-    <select className="form-control" onChange={handleChange}>
-      <option key="default" value="All">All books</option>
-      {
-        categories.map((cat) => <option key={cat} value={cat}>{cat}</option>)
-      }
-    </select>
+    <nav>
+      <div className="row">
+        <div className="col-12 col-md-9">
+          <div className="row">
+            <div className="col-12 col-md-7 col-lg-6">
+              <h1 className="title-logo">Bookstore CMS</h1>
+            </div>
+            <div className="col-12 col-md-2 col-lg-1 pt-2">
+              <a className="a-navbar" href="https://www.google.com">Books</a>
+            </div>
+            <div className="col-12 col-md-3 col-lg-2">
+              <select className="form-control" onChange={handleChange} aria-label="Default select example">
+                <option key="default" value="All" selected>All books</option>
+                {
+                  categories.map((cat) => <option key={cat} value={cat}>{cat}</option>)
+                }
+              </select>
+            </div>
+          </div>
+        </div>
+        <div className="col-12 col-md-3 mt-1">
+          <i className="fas fa-user fa-lg fa-icon float-right" />
+        </div>
+      </div>
+    </nav>
   );
 };
 
