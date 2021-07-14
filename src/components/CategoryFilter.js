@@ -18,7 +18,7 @@ const CategoryFilter = ({ handleFilterChange }) => {
               <a className="a-navbar" href="/">Books</a>
             </div>
             <div className="col-12 col-md-3 col-lg-2">
-              <select className="form-control" onChange={handleChange} aria-label="Default select example">
+              <select className="form-control" onChange={handleChange}>
                 <option key="default" value="All" selected>All books</option>
                 {
                   categories.map((cat) => <option key={cat} value={cat}>{cat}</option>)
