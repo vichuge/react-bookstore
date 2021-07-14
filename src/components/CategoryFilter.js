@@ -7,15 +7,15 @@ const CategoryFilter = ({ handleFilterChange }) => {
     handleFilterChange(e.target.value);
   };
   return (
-    <nav>
+    <nav className="mb-4">
       <div className="row">
         <div className="col-12 col-md-9">
           <div className="row">
             <div className="col-12 col-md-7 col-lg-6">
-              <h1 className="title-logo">Bookstore CMS</h1>
+              <h1 className="title-logo"><a className="a-logo" href="/">Bookstore CMS</a></h1>
             </div>
             <div className="col-12 col-md-2 col-lg-1 pt-2">
-              <a className="a-navbar" href="https://www.google.com">Books</a>
+              <a className="a-navbar" href="/">Books</a>
             </div>
             <div className="col-12 col-md-3 col-lg-2">
               <select className="form-control" onChange={handleChange} aria-label="Default select example">

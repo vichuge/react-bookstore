@@ -1,11 +1,11 @@
 body {
-  background-color: #f5f6fa;
+  background-color: #fafafa;
 }
 
 nav {
   background-color: white;
   padding: 2em;
-  border-bottom: 2px solid #ee6723;
+  border-bottom: 1px solid #f3f3f3;
   text-transform: uppercase;
   color: black;
 }
@@ -23,7 +23,58 @@ nav {
   color: #0290ff;
 }
 
-.a-navbar {
+.a-navbar,
+.book-option,
+.a-logo {
   text-decoration: none;
+}
+
+.a-navbar {
   color: black;
+}
+
+.card {
+  margin: 2em 3em;
+}
+
+.card-inside {
+  padding: 2em;
+  vertical-align: middle;
+}
+
+.gender-book,
+.title-book,
+.author-book {
+  margin-bottom: 0;
+}
+
+.gender-book {
+  font-weight: bold;
+  color: #888;
+}
+
+.title-book {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.author-book {
+  color: #0290ff;
+}
+
+.book-option {
+  color: #0290ff;
+}
+
+.current-chapter {
+  text-transform: uppercase;
+  color: #a7a7a7;
+}
+
+.btn-update {
+  text-transform: uppercase;
+  background-color: #0290ff;
+  color: white;
+  font-weight: 100;
+  font-size: 1em;
 }
