@@ -33,7 +33,9 @@ nav {
   color: black;
 }
 
-.card {
+.card,
+hr,
+.book-form {
   margin: 2em 3em;
 }
 
@@ -77,4 +79,15 @@ nav {
   color: white;
   font-weight: 100;
   font-size: 1em;
+}
+
+.title-form {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #888;
+}
+
+.btn-form {
+  background-color: #0290ff;
 }

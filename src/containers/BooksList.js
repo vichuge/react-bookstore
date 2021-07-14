@@ -41,6 +41,7 @@ const BooksList = ({
           />
         ))
       }
+      <hr />
     </>
   );
 };
