@@ -7,17 +7,17 @@ const CategoryFilter = ({ handleFilterChange }) => {
     handleFilterChange(e.target.value);
   };
   return (
-    <nav className="mb-4">
+    <nav>
       <div className="row">
         <div className="col-12 col-md-9">
           <div className="row">
-            <div className="col-12 col-md-7 col-lg-6">
+            <div className="col-12 col-md-12 col-lg-5 col-xl-5">
               <h1 className="title-logo"><a className="a-logo" href="/">Bookstore CMS</a></h1>
             </div>
-            <div className="col-12 col-md-2 col-lg-1 pt-2">
+            <div className="col-12 col-md-12 col-lg-2 col-xl-1 pt-2">
               <a className="a-navbar" href="/">Books</a>
             </div>
-            <div className="col-12 col-md-3 col-lg-2">
+            <div className="col-12 col-md-12 col-lg-3 col-xl-2">
               <select className="form-control" onChange={handleChange}>
                 <option key="default" value="All" selected>All books</option>
                 {
