@@ -14,30 +14,30 @@ const Book = ({ book, handleRemoveBook }) => {
         <div className="col-12 col-sm-3 col-md-4">
           <p className="gender-book">{book.category}</p>
           <p className="title-book">{book.title}</p>
-          <p className="author-book">JRR Tolkien</p>
+          <p className="author-book mb-2">Suzanne Collins</p>
           <div className="row">
-            <div className="col-12 col-lg-5">
+            <div className="col-12 col-lg-4 co-first">
               <a className="book-option" href="/">Comments</a>
             </div>
-            <div className="col-12 col-lg-4">
+            <div className="col-12 col-lg-3 co-middle">
               <a className="book-option" href="/">Remove</a>
             </div>
-            <div className="col-12 col-lg-3">
+            <div className="col-12 col-lg-3 co-last">
               <a className="book-option" href="/">Edit</a>
             </div>
           </div>
         </div>
-        <div className="col-6 col-sm-3 col-md-2 mt-4">
+        <div className="col-4 col-sm-3 col-md-2 col-lg-1 mt-2">
           <CircularProgressbar value={percentage} />
         </div>
         <div className="col-12 col-sm-3 col-md-2">
-          <h1>28%</h1>
-          <p>Completed</p>
+          <h2>28%</h2>
+          <p className="perc-completed">Completed</p>
         </div>
-        <div className="col-12 col-sm-3 col-md-4">
+        <div className="col-12 col-sm-3 col-md-4 card-last-div">
           <p className="current-chapter">Current chapter</p>
           <p>Chapter 13</p>
-          <button type="button" onClick={handleBookRemove} className="btn btn-update">Delete</button>
+          <button type="button" onClick={handleBookRemove} className="btn btn-update">Update progress</button>
         </div>
       </div>
     </div>

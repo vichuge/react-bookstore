@@ -1,7 +1,7 @@
 import { CREATE_BOOK, REMOVE_BOOK } from '../actionTypes';
 
 const initialState = [
-  { id: 1, title: 'title 1', category: 'Action' },
+  { id: 1, title: 'The Hunger games', category: 'Action' },
   { id: 2, title: 'title 2', category: 'Biography' },
 ];
 

@@ -1,5 +1,21 @@
+@font-face {
+  font-family: "RobotSlab";
+  src: url("./assets/fonts/RobotoSlab/RobotoSlab-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat-bold";
+  src: url("./assets/fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
 body {
   background-color: #fafafa;
+  font-family: "Montserrat", Arial, sans-serif;
 }
 
 nav {
@@ -19,8 +35,10 @@ nav {
 }
 
 .title-logo {
-  font-weight: bold;
+  font-family: "Montserrat-bold", Arial, sans-serif;
+  font-weight: 900;
   color: #0290ff;
+  font-size: 1.9em;
 }
 
 .a-navbar,
@@ -39,6 +57,11 @@ hr,
   margin: 2em 3em;
 }
 
+.card,
+hr {
+  font-family: "RobotSlab", Arial, sans-serif;
+}
+
 .card-inside {
   padding: 2em;
   vertical-align: middle;
@@ -53,24 +76,55 @@ hr,
 .gender-book {
   font-weight: bold;
   color: #888;
+  font-size: 0.9em;
 }
 
 .title-book {
-  font-weight: bold;
-  font-size: 1.5em;
+  font-weight: bolder;
+  font-size: 1.4em;
 }
 
 .author-book {
   color: #0290ff;
+  font-size: 0.8em;
+}
+
+.p-options {
+  color: #f3f3f3;
 }
 
 .book-option {
   color: #0290ff;
+  font-size: 0.8em;
+}
+
+.co-first {
+  padding-right: 0;
+}
+
+.co-middle {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.co-last {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.perc-completed {
+  font-size: 1em;
+  color: #a0a0a0;
+}
+
+.card-last-div {
+  text-align: right;
 }
 
 .current-chapter {
   text-transform: uppercase;
   color: #a7a7a7;
+  font-size: 0.9em;
 }
 
 .btn-update {
@@ -78,11 +132,12 @@ hr,
   background-color: #0290ff;
   color: white;
   font-weight: 100;
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 .title-form {
-  font-size: 1.5em;
+  font-family: "Montserrat-bold", Arial, sans-serif;
+  font-size: 1.3em;
   text-transform: uppercase;
   font-weight: bold;
   color: #888;
@@ -90,4 +145,21 @@ hr,
 
 .btn-form {
   background-color: #0290ff;
+}
+
+@media (max-width: 991px) {
+  .co-first {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+
+  .co-middle {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+
+  .co-last {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
 }
