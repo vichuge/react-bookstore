@@ -29,27 +29,30 @@ const BookForm = ({ createBook }) => {
     e.preventDefault();
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="form-group">
-        <input type="hidden" value={id} onChange={handleChangeId} />
-        <label htmlFor="title">
-          Title
-          <input placeholder="Add a title..." className="form-control" id="title" type="text" onChange={handleChange} value={title} required />
-        </label>
-      </div>
-      <div className="form-group mt-2">
-        <label htmlFor="category">
-          Category
-          <select className="form-control" onChange={handleChangeSelect} required value={category}>
-            <option key="default" value="">Select one...</option>
-            {
-              categories.map((name) => <option key={name} value={name}>{name}</option>)
-            }
-          </select>
-        </label>
-      </div>
-      <input type="submit" value="Create new book" className="btn btn-primary mt-3" />
-    </form>
+    <div className="book-form">
+      <h2 className="title-form">Add new book</h2>
+      <form onSubmit={handleSubmit} className="row">
+        <div className="col-12 col-sm-4 col-md-5 col-lg-5">
+          <div className="form-group">
+            <input type="hidden" value={id} onChange={handleChangeId} />
+            <input placeholder="Add a title..." className="form-control" id="title" type="text" onChange={handleChange} value={title} required />
+          </div>
+        </div>
+        <div className="col-12 col-sm-4 col-md-4 col-lg-5">
+          <div className="form-group">
+            <select className="form-control" onChange={handleChangeSelect} required value={category}>
+              <option key="default" value="">Select one...</option>
+              {
+                categories.map((name) => <option key={name} value={name}>{name}</option>)
+              }
+            </select>
+          </div>
+        </div>
+        <div className="col-12 col-sm-4 col-md-3 col-lg-2">
+          <input type="submit" value="Create new book" className="btn btn-primary btn-form" />
+        </div>
+      </form>
+    </div>
   );
 };
 

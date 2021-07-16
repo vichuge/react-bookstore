@@ -31,27 +31,17 @@ const BooksList = ({
   };
   return (
     <>
-      <CategoryFilter anyValue={handleFilterChange} />
-      <table className="table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            booksFilter().map((book) => (
-              <Book
-                key={book.id}
-                book={book}
-                handleRemoveBook={handleRemoveBook}
-              />
-            ))
-          }
-        </tbody>
-      </table>
+      <CategoryFilter handleFilterChange={handleFilterChange} />
+      {
+        booksFilter().map((book) => (
+          <Book
+            key={book.id}
+            book={book}
+            handleRemoveBook={handleRemoveBook}
+          />
+        ))
+      }
+      <hr />
     </>
   );
 };
