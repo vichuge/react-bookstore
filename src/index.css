@@ -127,9 +127,15 @@ hr {
   font-size: 0.9em;
 }
 
-.btn-update {
-  text-transform: uppercase;
+.btn-myblue {
   background-color: #0290ff;
+}
+
+.btn-update,
+.btn-danger,
+.btn-myblue:hover {
+  text-transform: uppercase;
+
   color: white;
   font-weight: 100;
   font-size: 0.8em;

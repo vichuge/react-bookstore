@@ -37,7 +37,9 @@ const Book = ({ book, handleRemoveBook }) => {
         <div className="col-12 col-sm-3 col-md-4 card-last-div">
           <p className="current-chapter">Current chapter</p>
           <p>Chapter 13</p>
-          <button type="button" onClick={handleBookRemove} className="btn btn-update">Update progress</button>
+          <button type="button" className="btn btn-update btn-myblue mb-1">Update progress</button>
+          <br />
+          <button type="button" onClick={handleBookRemove} className="btn btn-danger">Remove</button>
         </div>
       </div>
     </div>
